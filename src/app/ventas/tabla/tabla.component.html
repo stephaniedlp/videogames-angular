@@ -1,1 +1,34 @@
-<p>tabla works!</p>
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Imagen</th>
+                <th>Estado</th>
+                <th>Modelo</th>
+                <th>Notas</th>
+                <th>Precio</th>
+                <th>Ubicación</th>
+                <th>Cliente</th>
+                <th>Vendedor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let juegos of listadoVideojuegos">
+                <td> <strong>{{ juegos.id }}</strong> </td>
+                <td> <img [src]="rutaImagen + juegos.imagen" [alt]="juegos.id"> </td>
+                <td> <span class="tag">{{ juegos.estatus }}</span> </td>
+                <td>{{ juegos.modelo }}</td>
+                <td>{{ juegos.notas }}</td>
+                <td>{{ juegos.precioVenta | currency }}</td>
+                <td>{{ juegos.ubicacion }}</td>
+                <td>{{ !!juegos.cliente ? juegos.cliente : 'N/A' }}</td>
+                <td>{{ !!juegos.vendedor ? juegos.vendedor : 'N/A' }}</td>
+              </tr>
+        </tbody>
+    </table>
+</div>
+<div class="message" *ngIf="listadoVideojuegos.length === 0">
+    <p>No se encontraron registros...</p>
+  </div>
+  

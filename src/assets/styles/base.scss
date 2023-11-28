@@ -11,13 +11,12 @@ body {
   background-color: $background-color;
   font-family: $font-family;
   font-size: $font-size;
-  color: $font-color;
+  color: $font-color-light;
   margin: 0;
 }
 
 main {
-  background-color: $workarea-background-color;
-  box-shadow: rgba(255, 255, 255, 0.25) 0 0 100px 0;
+  background-color: $background-color;
   min-height: $workarea-min-height;
   border-radius: 8px;
   padding: 1rem 2rem;

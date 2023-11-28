@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Videojuegos } from 'src/app/models/videojuegos';
 
 @Component({
   selector: 'app-tabla',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class TablaComponent {
 
+  @Input() listadoVideojuegos: Videojuegos[] = [];
+
+  rutaImagen = '../../../../assets/img/real-estate/';
 }

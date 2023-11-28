@@ -5,8 +5,6 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: $color-tertiary;
-  box-shadow: 0 8px 8px -4px rgb(186, 186, 186);
   color: $font-color-light;
   text-align: center;
   font-size: 1.25rem;
@@ -19,7 +17,6 @@ header {
 
       ul {
         display: block;
-        text-transform: uppercase;
         list-style: none;
         padding: 0;
         text-align: center;
@@ -30,11 +27,13 @@ header {
         display: inline;
         margin-right: 2rem;
         padding: 0.5rem 2rem;
-        transition: color 0.3s ease;
+        transition: all 0.3s ease;
+        
 
         &:hover {
-          background: rgba(255, 255, 255, 0.3);
-          border-radius: 5px;
+          background: lighten($hover-color,45%);
+          color: $font-hover-color;
+          border-radius: 8px;
         }
       }
 
