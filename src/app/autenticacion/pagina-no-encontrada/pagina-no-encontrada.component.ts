@@ -37,7 +37,7 @@ styles: [`
 
 }
 .title-error{
-  color: black;
+  color: white;
   font-size: 40px;
   z-index:2;
   text-align: center;

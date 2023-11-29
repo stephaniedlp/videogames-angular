@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { DataService } from 'src/app/services/data.service';
+
 import { ExplorerComponent } from './explorer/explorer.component';
 import { ResumeComponent } from './resume/resume.component';
 import { TablaComponent } from './tabla/tabla.component';
+import { DetalleComponent } from './detalle/detalle.component';
 
 
 
@@ -10,7 +14,8 @@ import { TablaComponent } from './tabla/tabla.component';
   declarations: [
     ExplorerComponent,
     ResumeComponent,
-    TablaComponent
+    TablaComponent,
+    DetalleComponent
   ],
   imports: [
     CommonModule

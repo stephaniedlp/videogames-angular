@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+
 import { Videojuegos } from 'src/app/models/videojuegos';
 
 @Component({
@@ -8,7 +9,12 @@ import { Videojuegos } from 'src/app/models/videojuegos';
 })
 export class TablaComponent {
 
+  
+  @Input() mensaje: string = '';
+
   @Input() listadoVideojuegos: Videojuegos[] = [];
 
-  rutaImagen = '../../../../assets/img/real-estate/';
+  juegoSeleccionado: Videojuegos | null = null;
+
+  rutaImagen = '../assets/img/juegos/';
 }

@@ -2,33 +2,43 @@
     <table>
         <thead>
             <tr>
-                <th>id</th>
-                <th>Imagen</th>
-                <th>Estado</th>
-                <th>Modelo</th>
+                <th>ID venta</th>
+                <th>Nombre</th>                        
                 <th>Notas</th>
+                <th>Fecha</th>
                 <th>Precio</th>
-                <th>Ubicación</th>
                 <th>Cliente</th>
                 <th>Vendedor</th>
+                <th> Ver</th>
             </tr>
+            
         </thead>
         <tbody>
-            <tr *ngFor="let juegos of listadoVideojuegos">
+            <tr *ngFor="let juegos of listadoVideojuegos" >
+                
                 <td> <strong>{{ juegos.id }}</strong> </td>
-                <td> <img [src]="rutaImagen + juegos.imagen" [alt]="juegos.id"> </td>
-                <td> <span class="tag">{{ juegos.estatus }}</span> </td>
-                <td>{{ juegos.modelo }}</td>
+                <td>{{ juegos.nombre }}</td>                
                 <td>{{ juegos.notas }}</td>
-                <td>{{ juegos.precioVenta | currency }}</td>
-                <td>{{ juegos.ubicacion }}</td>
+                <td>{{ juegos.fecha | date:'dd-MM-yyyy' }}</td>
+                <td>{{ juegos.totalVentas | currency }}</td>
                 <td>{{ !!juegos.cliente ? juegos.cliente : 'N/A' }}</td>
                 <td>{{ !!juegos.vendedor ? juegos.vendedor : 'N/A' }}</td>
-              </tr>
+                <td> 
+                <button (click)="juegoSeleccionado = juegos"  class="btn-submit">Detalles</button></td>
+
+            </tr>
         </tbody>
     </table>
 </div>
 <div class="message" *ngIf="listadoVideojuegos.length === 0">
-    <p>No se encontraron registros...</p>
+    <p>{{ mensaje ? 'Cargando...' : 'No se encontraron registros...'}}</p>
   </div>
+
+<app-detalle *ngIf="juegoSeleccionado !== null"
+  [juego]="juegoSeleccionado"
+  (close)="juegoSeleccionado = null">
+
+</app-detalle>
+
+
   
