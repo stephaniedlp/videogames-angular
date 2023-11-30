@@ -2,12 +2,11 @@
 
 
 .filter-section {
-  background-color: $amber;
   color: $indigo-dye;
   padding: 2rem;
   margin: 1rem 2;
   border: none;
-  border: 1px solid darken($background-color, 10%);
+  border: 1px solid darken($workarea-background-color, 10%);
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -95,8 +94,8 @@ button {
   }
 
   &.btn-submit {
-    background-color: $font-color-dark;
-    color: $selective-yellow;
+    background-color: $indigo-dye;
+    color: $workarea-background-color;
   }
 
   &.btn-submit:hover {
