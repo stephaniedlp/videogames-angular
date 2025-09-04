@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-pagina-no-encontrada',
   template: `
   <div class="not-found-container">
-    <img src="../../../../assets/img/404.gif" alt="Imagen no encontrada" class="not-found-image">
+    <img src="../../../src/assets/img/404.gif" alt="Imagen no encontrada" class="not-found-image">
     
   <p class="title-error">
     404 <br> Whooops!, That's no moon.
