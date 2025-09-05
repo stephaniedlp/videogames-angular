@@ -14,36 +14,32 @@ header {
   height: $header-height;
 
   nav {
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    transition: all 0.3s ease;
 
-      ul {
-        display: block;
-        list-style: none;
-        padding: 0;
-        text-align: center;
-        margin: 0;
-      }
 
-      li {
-        display: inline;
-        margin-right: 2rem;
-        padding: 0.5rem 2rem;
-        transition: all 0.3s ease;
-        
-
-        &:hover {
-          background: lighten($hover-color,45%);
-          color: $font-hover-color;
-          border-radius: 8px;
-        }
-      }
-
-      a {
-        text-decoration: none;
-        color: $font-color-light;
-        font-weight: bold;
-      }
+    li {
+      display: inline;
+      margin-right: 2rem;
+      padding: 0.5rem 2rem;
 
     }
+
+    a {
+      text-decoration: none;
+      color: $font-color-light;
+      font-weight: bold;
+    }
+
+    &:hover {
+      background: lighten($hover-color, 45%);
+      color: $font-hover-color;
+      border-radius: 8px;
+    }
+
+  }
 }
 
 
@@ -69,14 +65,17 @@ header {
   header {
     text-align: center;
     font-size: 1rem;
+    padding: auto;
     line-height: 1rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 
     nav {
-
-      ul {
-        display: flex;
-        flex-direction: column;
-      }
+      padding: 0;
+      text-align: center;
+      margin: 0;
+      transition: all 0.3s ease;
 
       li {
         margin-right: 0;

@@ -12,7 +12,6 @@ import { PaginaNoEncontradaComponent } from './autenticacion/pagina-no-encontrad
 const routes: Routes = [
   { path:'home', component: HomeComponent },
   { path:'explorer', component: ExplorerComponent },
-  { path:'ventas', component: ResumeComponent },
   { path:'', redirectTo: '/home', pathMatch: 'full' },
   { path:'**', component: PaginaNoEncontradaComponent } //componente not found
 ];

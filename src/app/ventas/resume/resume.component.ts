@@ -8,6 +8,6 @@ import { Component, Input } from '@angular/core';
 
 export class ResumeComponent {
   
-  @Input() mensaje: string = '';
+  @Input() mensaje: string = ' ';
 
 }
